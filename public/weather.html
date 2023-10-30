@@ -18,21 +18,44 @@
             </div>
         </div>
     </nav>
+    <form action="/weather" method="GET">
+            
+        <div id="inputs">
+        <input type="text" name="cityInput" id="cityInput" placeholder="City Name">
+        <span><button type="submit" id="submitButton">SUBMIT</button></span>
+        </div>
 
-    <input type="text" placeholder="City Name">
-    <div id="weatherContainer">
-        <div id="temperature">100 F</div>
-        <div id="humidity"> 5%</div>
-        <div id="wind">3mph</div>
-        <div id="rain">3%</div>
-        <div id="hi">101F</div>
-        <div id="low">64F</div>
-        <div id="uv">3</div>
-        <div id="query">Phoenix, AZ</div>
-        <div id="date">10/27/2023</div>
-        <div id="climate">Sunny</div>
-        <div id="climateImage"><img src="https://cdn.weatherapi.com/weather/64x64/day/176.png"></div>
 
+        <div id="weatherContainer">
+            <div id="weatherInfo">
+                
+                <div id="one">
+                <div id="climateImage"><img class="imageIcon" src="https://cdn.weatherapi.com/weather/64x64/day/176.png"></div>
+                <div id="temperature" class="temp">100 F</div>
+                </div>
+
+                <div id="two">
+                <div id="query"><span class="regular">Results for:</span> Phoenix, AZ</div>
+                <div id="date">10/27/2023</div>
+                <div id="climate">Sunny</div>
+                </div>
+
+                <div id="three">
+                <div id="humidity" class="col"><div class="desc">Humidity</div>5%</div>
+                <div id="wind" class="col"><div class="desc">Wind</div>3mph</div>
+                <div id="rain" class="col"><div class="desc">Rain</div>3%</div>
+                </div>
+
+                <div id="four">
+                <div id="hi" class="col"><div class="desc">HI</div>101F</div>
+                <div id="low" class="col"><div class="desc">LOW</div>64F</div>
+                <div id="uv" class="col"><div class="desc">UV</div>3</div>
+                </div>
+
+                
+                
+            </div>
     </div>
+</form>
 </body>
 </html>
