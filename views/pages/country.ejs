@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<link
+			rel="stylesheet"
+			href="./styles/css/country.css"
+		/>
+
+		<title>Country Data</title>
+	</head>
+	<body>
+		<nav>
+			<div class="nav-center">
+				<h1>ACTIVE API</h1>
+				<div>
+					<a href="index.html">Instructions</a>
+					<a href="country.html">Country</a>
+					<a href="weather.html">Weather</a>
+				</div>
+			</div>
+		</nav>
+		<form
+			action="/country"
+			method="GET"
+		>
+			<div id="inputs">
+				<input
+					type="text"
+					name="countryInput"
+					id="countryInput"
+					placeholder="Country Name"
+				/>
+				<span
+					><button
+						type="submit"
+						id="submitButton"
+					>
+						SUBMIT
+					</button></span
+				>
+			</div>
+
+			<div id="countryContainer">
+				<% if(valid){ %>
+				<div id="countryInfo">
+					<div id="one">
+						<div id="flag">
+							<img
+								class="imageIcon"
+								src="<%= country.flags.svg %>"
+							/>
+						</div>
+					</div>
+
+					<div id="two">
+						<div id="query"><span class="regular">Results for: </span><%=country.name.common%></div>
+						<div id="language"><span class="regular">Language:</span><%=country.languages[0].name%></div>
+						<div id="gdp"><span class="regular">GDP:</span> <%=country.gdp.value%></div>
+					</div>
+
+					<div id="three">
+						<div id="population"><span class="regular">Population:</span> <%=country.population%></div>
+						<div id="region"><span class="regular">Region:</span> <%=country.region%></div>
+						<div id="currency"><span class="regular">Currency:</span> <%=country.currencies[0].name%></div>
+					</div>
+
+					<div id="four">
+						<div id="coatofarms">
+							<img
+								class="imageIcon"
+								src="<%=country.coatOfArms.svg%>"
+							/>
+						</div>
+					</div>
+				</div>
+				<% }else{ %>
+				<h2>
+					Nobody's home, go away <br />
+					(invalid search or API error)
+				</h2>
+				<% } %>
+			</div>
+		</form>
+	</body>
+</html>
