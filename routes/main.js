@@ -30,5 +30,38 @@ router.get("/weather", async (req, res) => {
 		console.error(error);
 	}
 });
+router.get("/country", async (req, res) => {
+	const { countryInput } = req.query;
+	const options = {
+		method: "GET",
+		url: `https://geography4.p.rapidapi.com/apis/geography/v1/country/name/${countryInput ? countryInput : "United States"}`,
+		params: {
+			limit: "1",
+			sortOrder: "asc",
+			sortBy: "name",
+		},
+		headers: {
+			"X-RapidAPI-Key": "9a5538dfe1msh2d0809fe77537c5p19ad31jsn919dd5815d3f",
+			"X-RapidAPI-Host": "geography4.p.rapidapi.com",
+		},
+	};
+
+	try {
+		await axios
+			.request(options)
+			.then((country) => {
+				if (country.data[0]) {
+					res.status(200).render("pages/country", { country: country.data[0], valid: true });
+				} else {
+					res.status(400).render("pages/country", { country: {}, valid: false });
+				}
+			})
+			.catch(() => {
+				res.status(400).render("pages/country", { country: {}, valid: false });
+			});
+	} catch (error) {
+		console.error(error);
+	}
+});
 
 module.exports = router;
