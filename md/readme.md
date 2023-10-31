@@ -9,7 +9,7 @@ This is a simple server project to access two external APIs and use these APIs t
 
 ## Acknowledgements
 
-- [GeoDB Cities]()
+- [Geography API](https://rapidapi.com/mmplabsadm/api/geography4/)
 - [Weather API](https://www.weatherapi.com/)
 
 ## License
