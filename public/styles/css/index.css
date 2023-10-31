@@ -415,4 +415,28 @@ h5 {
 
 body {
   background-color: #E6E6E6;
+}
+
+#inner {
+  padding: 2vh;
+}
+
+#container {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+  margin: auto;
+  margin-top: 5vh;
+  height: 80vh;
+  width: 40vw;
+  background-color: #ADADAD;
+}
+
+#container p {
+  font-size: 2.5vh;
+  color: black;
+}
+
+#container h3 {
+  font-size: 3vh;
 }/*# sourceMappingURL=index.css.map */
