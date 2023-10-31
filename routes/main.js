@@ -2,33 +2,27 @@ const express = require("express");
 const axios = require("axios");
 const router = express.Router();
 
-router.get("", (req, res) => {
-  const axios = require('axios');
+router.get("/weather", async (req, res) => {
+	const options = {
+		method: "GET",
+		url: "https://weatherapi-com.p.rapidapi.com/forecast.json",
+		params: {
+			q: "Phoenix",
+			days: "1",
+		},
+		headers: {
+			"X-RapidAPI-Key": "9a5538dfe1msh2d0809fe77537c5p19ad31jsn919dd5815d3f",
+			"X-RapidAPI-Host": "weatherapi-com.p.rapidapi.com",
+		},
+	};
 
-const options = {
-  method: 'GET',
-  url: 'https://geography4.p.rapidapi.com/apis/geography/v1/country/group/NATO',
-  params: {
-    limit: '10',
-    sortBy: 'name',
-    sortOrder: 'asc'
-  },
-  headers: {
-    'X-RapidAPI-Key': '9a5538dfe1msh2d0809fe77537c5p19ad31jsn919dd5815d3f',
-    'X-RapidAPI-Host': 'geography4.p.rapidapi.com'
-  }
-};
-
-try {
-	const response = await axios.request(options);
-	console.log(response.data);
-} catch (error) {
-	console.error(error);
-}
-	axios({method:'get', url}).
-  res.render("pages/readme", {
-    
-  });
+	try {
+		await axios.request(options).then((weather, error) => {
+			res.render("pages/weather", { weather: weather.data });
+		});
+	} catch (error) {
+		console.error(error);
+	}
 });
 
 module.exports = router;
