@@ -35,11 +35,12 @@ body {
 
 #one {
     font-weight: 800;
-    grid-area: one;
-    display: flex;
 
 }
-
+.top{
+    grid-area: one;
+    display: flex;
+}
 #two {
     position: right;
     font-weight: 800;

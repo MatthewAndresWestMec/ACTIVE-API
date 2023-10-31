@@ -448,6 +448,9 @@ body {
 
 #one {
   font-weight: 800;
+}
+
+.top {
   grid-area: one;
   display: flex;
 }
