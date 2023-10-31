@@ -1,5 +1,111 @@
-@use './partials/navbar';
 @use './partials/normalize';
-body{
+@use './partials/navbar';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Poppins:wght@700&display=swap');
+
+body {
     background-color: #E6E6E6;
+}
+.desc{
+    color: #515151;
+    margin:0;
+}
+#countryContainer {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    margin: auto;
+    margin-top: 5vh;
+    height: 70vh;
+    width: 90vw;
+    background-color: (#6880A7);
+}
+
+#countryInfo {
+    font-size: 5vh;
+    column-gap: 10%;
+    padding: 5vh;
+    height: 90%;
+    display: grid;
+    text-align: center;
+    grid-template-areas:
+        "one two"
+        "three four";
+}
+
+#one {
+    font-weight: 800;
+
+}
+.top{
+    grid-area: one;
+    display: flex;
+}
+#two {
+    position: right;
+    font-weight: 800;
+    grid-area: two;
+
+}
+
+#three {
+    font-weight: 800;
+    // display: flex;
+    // justify-content: space-between;
+    grid-area: three;
+
+}
+
+#four {
+    font-weight: 800;
+    grid-area: four;
+text-align: center;
+}
+
+.col {
+    flex: 1;
+    /* Each column takes an equal amount of space */
+    padding: 20px;
+
+}
+.regular{
+    color: black;
+    font-weight: 400;
+}
+.temp{
+    font-size: 10vh;
+}
+.imageIcon{
+    height: 17.5vh;
+    width: 10vw;
+}
+
+form {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    // font-size: 5vh;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* Reset the styles for form inputs and buttons */
+input,
+button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    padding:1.5vh
+}
+#inputs{
+margin: 5vh 0 0 5vh;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-weight: 700;
+}
+#submitButton{
+    background-color: #3C434E;
+    color: white;
 }
