@@ -40,7 +40,10 @@ To run this API, follow these steps:
 
 1. Ensure you have Node.js installed.
 2. Install the required dependencies using `npm install`.
-3. Run the application using `npm start` or your preferred command.
+3. Create a .env file in the root of the project with three variables: `PORT`, `WEATHER`, and `GEOGRAPHY`
+4. Set `PORT` to your preferred port for this API.
+5. Set both `WEATHER` and `GEOGRAPHY` to their respective API keys.
+6. Run the application using `npm start` or your preferred command.
 
 ## Code Explanation
 
@@ -49,6 +52,7 @@ The main file (`app.js` or similar) contains the Express server setup with vario
 ## Important Notes
 
 - **Port:** The API runs on port 2000, and it's hot-swappable as defined in the main file.
+- **APIs** You need to provide your own API keys for Weather and Geography in order to use our API.
 
 ## API Dependencies
 
