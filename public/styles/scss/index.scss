@@ -7,6 +7,14 @@ body{
 #inner{
     padding: 2vh;
 }
+#big{
+    color: #3B3B3B;
+    font-weight: 700;
+}
+#semi{
+    font-weight: 600;
+    color: #515151;
+}
 #container {
     color: white;
     font-family: 'Open Sans', sans-serif;
@@ -16,6 +24,7 @@ body{
     height: 80vh;
     width: 40vw;
     background-color: (#ADADAD);
+
 }
 
 #container p {
@@ -25,4 +34,38 @@ body{
 
 #container h3{
     font-size: 3vh;
+}
+#button {
+    padding: 1.5vh 4vh 1.5vh 4vh;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+        font-size: 3vh;
+        color:white;
+        background-color: #3C434E;
+        text-decoration: none;
+}
+
+input,
+button {
+    margin: 0;    border: 0;
+    vertical-align: baseline;
+}
+a {
+    color:white
+}
+
+/* Unvisited link  */
+a:visited {
+    color: white;
+}
+
+/* Visited link    */
+a:hover {
+    color: white;
+}
+
+/* Mouse over link */
+a:active {
+    color: white;
 }

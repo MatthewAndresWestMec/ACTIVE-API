@@ -8,7 +8,7 @@ router.get("/weather", async (req, res) => {
 		method: "GET",
 		url: "https://weatherapi-com.p.rapidapi.com/forecast.json",
 		params: {
-			q: cityInput ? cityInput : "Arizona",
+			q: cityInput ? cityInput : "Phoenix, Arizona",
 			days: "1",
 		},
 		headers: {

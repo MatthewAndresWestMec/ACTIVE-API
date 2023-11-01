@@ -14,7 +14,7 @@
 		<title>Weather</title>
 	</head>
 
-	<title>Weather</title>
+	 <title>Weather</title>
 </head>
 
 <body>
@@ -44,7 +44,7 @@
 						<img class="imageIcon" src="https://cdn.weatherapi.com/weather/64x64/day/176.png" />
 					</div>
 					<div id="temperature" class="temp">
-						100 F
+						<%=weather.current.temp_f%> F
 					</div>
 					</div>
 					<div id="climate">
@@ -91,15 +91,15 @@
 					<div id="uv" class="col">
 						<div class="desc">UV</div>
 						<%=weather.forecast.forecastday[0].day.uv%>
-					</div>
-	<body>
+					</div> 
+	<!-- <body>
 		<nav>
 			<div class="nav-center">
 				<h1>ACTIVE API</h1>
 				<div>
-					<a href="">Instructions</a>
-					<a href="country">Country</a>
-					<a href="weather">Weather</a>
+					<a href="/index">Instructions</a>
+					<a href="/country">Country</a>
+					<a href="/weather">Weather</a>
 				</div>
 			</div>
 		</nav>
@@ -208,7 +208,7 @@
 					(invalid search or API error)
 				</h2>
 				<% } %>
-			</div>
+			</div> -->
 		</form>
 	</body>
 </html>
