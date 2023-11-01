@@ -12,7 +12,7 @@ router.get("/weather", async (req, res) => {
 			days: "1",
 		},
 		headers: {
-			"X-RapidAPI-Key": "9a5538dfe1msh2d0809fe77537c5p19ad31jsn919dd5815d3f",
+			"X-RapidAPI-Key": process.env.WEATHER,
 			"X-RapidAPI-Host": "weatherapi-com.p.rapidapi.com",
 		},
 	};
@@ -41,7 +41,7 @@ router.get("/country", async (req, res) => {
 			sortBy: "name",
 		},
 		headers: {
-			"X-RapidAPI-Key": "9a5538dfe1msh2d0809fe77537c5p19ad31jsn919dd5815d3f",
+			"X-RapidAPI-Key": process.env.GEOGRAPHY,
 			"X-RapidAPI-Host": "geography4.p.rapidapi.com",
 		},
 	};
@@ -66,8 +66,7 @@ router.get("/country", async (req, res) => {
 
 router.get("/", async (req, res) => {
 	try {
-		await axios
-			res.status(200).render("pages/index")
+		res.status(200).render("pages/index");
 	} catch (error) {
 		console.error(error);
 	}

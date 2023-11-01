@@ -38,6 +38,7 @@
 
 		<div id="weatherContainer">
 			<div id="weatherInfo">
+				<% if(valid){ %>
 				<div id="one">
 					<div class="top">
 					<div id="climateImage">
@@ -91,124 +92,14 @@
 					<div id="uv" class="col">
 						<div class="desc">UV</div>
 						<%=weather.forecast.forecastday[0].day.uv%>
-					</div> 
-	<!-- <body>
-		<nav>
-			<div class="nav-center">
-				<h1>ACTIVE API</h1>
-				<div>
-					<a href="/index">Instructions</a>
-					<a href="/country">Country</a>
-					<a href="/weather">Weather</a>
-				</div>
-			</div>
-		</nav>
-		<form
-			action="/weather"
-			method="GET"
-		>
-			<div id="inputs">
-				<input
-					type="text"
-					name="cityInput"
-					id="cityInput"
-					placeholder="City Name"
-				/>
-				<span
-					><button
-						type="submit"
-						id="submitButton"
-					>
-						SUBMIT
-					</button></span
-				>
-			</div>
-
-			<div id="weatherContainer">
-				<% if(valid){ %>
-				<div id="weatherInfo">
-					<div id="one">
-						<div class="top">
-							<div id="climateImage">
-								<img
-									class="imageIcon"
-									src="https://cdn.weatherapi.com/weather/64x64/day/176.png"
-								/>
-							</div>
-							<div
-								id="temperature"
-								class="temp"
-							>
-								100 F
-							</div>
-						</div>
-						<div id="climate"><%=weather.current.condition.text%></div>
 					</div>
-
-					<div id="two">
-						<div id="query">
-							<span class="regular">Results for:</span>
-							<%=weather.location.name%>, <%=weather.location.region%>
-						</div>
-						<div id="date"><%=weather.location.localtime%></div>
-						<div id="moon"><%=weather.forecast.forecastday[0].astro.moon_phase%></div>
 					</div>
-
-					<div id="three">
-						<div
-							id="humidity"
-							class="col"
-						>
-							<div class="desc">Humidity</div>
-							<%=weather.current.humidity%>%
-						</div>
-						<div
-							id="wind"
-							class="col"
-						>
-							<div class="desc">Wind</div>
-							<%=weather.current.wind_mph%>mph
-						</div>
-						<div
-							id="rain"
-							class="col"
-						>
-							<div class="desc">Rain</div>
-							<%=weather.forecast.forecastday[0].day.daily_chance_of_rain%>%
-						</div>
-					</div>
-
-					<div id="four">
-						<div
-							id="hi"
-							class="col"
-						>
-							<div class="desc">HI</div>
-							<%=weather.forecast.forecastday[0].day.maxtemp_f%>F
-						</div>
-						<div
-							id="low"
-							class="col"
-						>
-							<div class="desc">LOW</div>
-							<%=weather.forecast.forecastday[0].day.mintemp_f%>F
-						</div>
-						<div
-							id="uv"
-							class="col"
-						>
-							<div class="desc">UV</div>
-							<%=weather.forecast.forecastday[0].day.uv%>
-						</div>
-					</div>
-				</div>
-				<% }else{ %>
-				<h2>
+					<% }else{ %>
+						<h2>
 					Nobody's home, go away <br />
 					(invalid search or API error)
 				</h2>
-				<% } %>
-			</div> -->
+					<% } %> 
 		</form>
 	</body>
 </html>
