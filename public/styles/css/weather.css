@@ -89,7 +89,8 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -436,7 +437,8 @@ body {
 
 #weatherInfo {
   font-size: 5vh;
-  column-gap: 10%;
+  -moz-column-gap: 10%;
+       column-gap: 10%;
   padding: 5vh;
   height: 90%;
   display: grid;
