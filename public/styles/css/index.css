@@ -485,4 +485,8 @@ a:hover {
 /* Mouse over link */
 a:active {
   color: white;
+}
+
+p {
+  font-weight: 600;
 }/*# sourceMappingURL=index.css.map */
