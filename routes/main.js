@@ -64,4 +64,12 @@ router.get("/country", async (req, res) => {
 	}
 });
 
+router.get("/", async (req, res) => {
+	try {
+		await axios
+			res.status(200).render("pages/index")
+	} catch (error) {
+		console.error(error);
+	}
+});
 module.exports = router;
